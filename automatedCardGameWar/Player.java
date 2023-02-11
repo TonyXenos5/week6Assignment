@@ -95,11 +95,14 @@ public class Player {
 		if (card1 != card2) {
 			if (card1 > card2) {
 				System.out.println("\nRound " + turn + " goes to Player 1!");
+				App.playerOneScore++;
 			} else {
 				System.out.println("\nRound " + turn + " goes to Player 2!");
+				App.playerTwoScore++;
 			}
 		} else if (card1 == card2) {
 			System.out.println("\nRound " + turn + " is a Tie!");
+			 // Ties result in no points being added to either score
 		}
 		
 	}

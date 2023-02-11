@@ -7,6 +7,8 @@ public class App {
 
 	static List<String> dealOne = new ArrayList<String>();
 	static List<String> dealTwo = new ArrayList<String>();
+	static int playerOneScore = 0;
+	static int playerTwoScore = 0;
 	static int currentRound = 0;
 
 	public static void main(String[] args) {
@@ -24,8 +26,6 @@ public class App {
 
 	private static void playWarGame(Player playerOne, Player playerTwo) {
 		
-		int playerOneScore = 0;
-		int playerTwoScore = 0;
 		String card1value;
 		String card2value;
 		int numOfRounds = 25;
@@ -45,16 +45,11 @@ public class App {
 			
 			Player.flip(roundNum);
 			
-			if(Player.card1 > Player.card2) {
-				playerOneScore++;
-			} else if(Player.card1 < Player.card2){
-				playerTwoScore++;
-			} // Ties result in no points being added to either score
-			
 			Player.incrementScore();
 			
-//			System.out.println("P1 Score: " + playerOneScore);
-//			System.out.println("P2 Score: " + playerTwoScore);
+			System.out.println("P1 Score: " + playerOneScore);
+			System.out.println("P2 Score: " + playerTwoScore);
+			
 		}
 		
 		System.out.println("\n-----------------------------------\n"
